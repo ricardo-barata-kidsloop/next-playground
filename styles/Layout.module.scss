@@ -1,0 +1,14 @@
+.layout {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+}
+
+.mainWrapper {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    flex: 1 1 0%;
+    display: flex;
+    position: relative;
+}

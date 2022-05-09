@@ -1,24 +1,43 @@
 {
-  "name": "next-playground",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.4",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.23",
-    "@types/react": "17.0.43",
-    "@types/react-dom": "17.0.14",
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
-    "typescript": "4.6.3"
-  }
+    "name": "next-playground",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prettier:verify": "prettier --config --check ./.prettierrc \"**/*{.tsx,.scss,.json,.js}\"",
+        "prettier:fix": "prettier --config --write ./.prettierrc \"**/*{.tsx,.scss,.json,.js}\""
+    },
+    "dependencies": {
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@heroicons/react": "^1.0.6",
+        "@mui/icons-material": "^5.6.0",
+        "@mui/material": "^5.6.0",
+        "@stoplight/elements": "^7.5.18",
+        "contentlayer": "^0.2.4",
+        "core-js": "^3.22.2",
+        "mobx": "^6.5.0",
+        "next": "12.1.4",
+        "next-contentlayer": "^0.2.4",
+        "nprogress": "^0.2.0",
+        "react": "18.0.0",
+        "react-dom": "18.0.0",
+        "redoc": "^2.0.0-rc.66",
+        "styled-components": "^5.3.5"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.23",
+        "@types/nprogress": "^0.2.0",
+        "@types/react": "17.0.43",
+        "@types/react-dom": "17.0.14",
+        "eslint": "8.12.0",
+        "eslint-config-next": "12.1.4",
+        "prettier": "^2.6.2",
+        "prettier-plugin-organize-imports": "^2.3.4",
+        "sass": "^1.49.11",
+        "typescript": "4.6.3"
+    }
 }

@@ -1,0 +1,25 @@
+.toolbar {
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    svg {
+        width: 2rem;
+    }
+    justify-content: flex-end;
+    button {
+        &:last-of-type {
+            margin-left: 1rem;
+        }
+    }
+    box-shadow: 0px 1px 9px 0px lightgrey;
+    z-index: 2;
+}
+
+.withExpandSidebar {
+    justify-content: space-between;
+}
