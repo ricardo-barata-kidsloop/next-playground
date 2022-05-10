@@ -7,9 +7,10 @@ export default function Page2() {
     return (
         <API
             apiDescriptionUrl="https://swagger-ui.kidsloop.net/config/api.swagger.json"
-            router="memory"
+            router="history"
             hideTryIt
             layout="sidebar"
+            basePath="/page2/"
         />
     );
 }
