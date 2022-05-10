@@ -71,7 +71,7 @@ export default function Sidebar() {
                                     }}
                                 ></HomeOutlined>
                             </ListItemIcon>
-                            <ListItemText primary="Home" />
+                            <ListItemText primary="Landing" />
                         </ListItem>
                     </Link>
                     <ListItemButton onClick={handleApiRouteClick}>
@@ -82,7 +82,7 @@ export default function Sidebar() {
                                 }}
                             ></ApiOutlined>
                         </ListItemIcon>
-                        <ListItemText primary="Api" />
+                        <ListItemText primary="Specs" />
                         {apiNavOpen ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                     <Collapse in={apiNavOpen} timeout="auto" unmountOnExit>
@@ -91,7 +91,7 @@ export default function Sidebar() {
                             disablePadding
                             sx={{ marginLeft: '1rem' }}
                         >
-                            <Link href="/page1" passHref>
+                            <Link href="/specs/swagger" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
                                         <GridView
@@ -100,10 +100,10 @@ export default function Sidebar() {
                                             }}
                                         ></GridView>
                                     </ListItemIcon>
-                                    <ListItemText primary="Page 1" />
+                                    <ListItemText primary="Swagger" />
                                 </ListItem>
                             </Link>
-                            <Link href="/page2" passHref>
+                            <Link href="/specs/elements" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
                                         <GridView
@@ -112,10 +112,10 @@ export default function Sidebar() {
                                             }}
                                         ></GridView>
                                     </ListItemIcon>
-                                    <ListItemText primary="Page 2" />
+                                    <ListItemText primary="Elements" />
                                 </ListItem>
                             </Link>
-                            <Link href="/page3" passHref>
+                            <Link href="/specs/redoc" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
                                         <GridView
@@ -124,7 +124,7 @@ export default function Sidebar() {
                                             }}
                                         ></GridView>
                                     </ListItemIcon>
-                                    <ListItemText primary="Page 3" />
+                                    <ListItemText primary="Redoc" />
                                 </ListItem>
                             </Link>
                         </List>

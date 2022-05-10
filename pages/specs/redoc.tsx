@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 import { RedocStandalone } from 'redoc';
-import Layout from '../components/Layout/Layout';
-import styles from '../styles/Home.module.scss';
+import Layout from 'components/Layout/Layout';
+import styles from 'styles/Home.module.scss';
 
-export default function Page1() {
+export default function ApiRedoc() {
     return (
         <div className={styles.myRedoc}>
             <RedocStandalone
@@ -22,6 +22,6 @@ export default function Page1() {
     );
 }
 
-Page1.getLayout = (page: ReactElement) => {
+ApiRedoc.getLayout = (page: ReactElement) => {
     return <Layout>{page}</Layout>;
 };

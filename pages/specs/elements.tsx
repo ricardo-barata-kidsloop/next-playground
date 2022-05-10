@@ -1,11 +1,11 @@
 import { API } from '@stoplight/elements';
 import '@stoplight/elements/styles.min.css';
+import Layout from 'components/Layout/Layout';
 import useWindowSize from 'hooks/useWindowSize';
 import { ReactElement, useEffect, useState } from 'react';
-import Layout from '../components/Layout/Layout';
 
 type Layout = 'sidebar' | 'stacked';
-export default function Page2() {
+export default function ApiElements() {
 
     const { width, height } = useWindowSize();
 
@@ -25,11 +25,11 @@ export default function Page2() {
             router="history"
             hideTryIt
             layout={layout}
-            basePath="/page2/"
+            basePath="/specs/elements/"
         />
     );
 }
 
-Page2.getLayout = (page: ReactElement) => {
+ApiElements.getLayout = (page: ReactElement) => {
     return <Layout>{page}</Layout>;
 };

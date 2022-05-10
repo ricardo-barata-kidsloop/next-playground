@@ -9,7 +9,7 @@ const Header = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/page1', undefined, { shallow: true });
+        router.push('/specs/swagger', undefined, { shallow: true });
     };
 
     return (
