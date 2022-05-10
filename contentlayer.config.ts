@@ -2,17 +2,18 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 
 const Doc = defineDocumentType(() => ({
   name: 'Doc',
-  filePathPattern: `**/*.md`,
+  filePathPattern: `**/*.md*`,
+  contentType: 'mdx',
   fields: {
     title: {
       type: 'string',
       description: 'The title of the doc',
-      required: true,
+      required: false,
     },
     date: {
       type: 'date',
       description: 'The date of the doc',
-      required: true,
+      required: false,
     },
   },
   computedFields: {

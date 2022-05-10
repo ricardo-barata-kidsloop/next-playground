@@ -13,6 +13,7 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { allDocs, Doc } from 'contentlayer/generated';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { useLayoutContext } from '../../contexts/LayoutContext';
@@ -146,42 +147,24 @@ export default function Sidebar() {
                             disablePadding
                             sx={{ marginLeft: '1rem' }}
                         >
-                            <Link href="/docs/create-a-blog-post" passHref>
-                                <ListItem button component="a">
-                                    <ListItemIcon>
-                                        <MenuBookOutlinedIcon
-                                            style={{
-                                                color: '#e2e8f0',
-                                            }}
-                                        ></MenuBookOutlinedIcon>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Page 1" />
-                                </ListItem>
-                            </Link>
-                            <Link href="/docs/create-a-document" passHref>
-                                <ListItem button component="a">
-                                    <ListItemIcon>
-                                        <MenuBookOutlinedIcon
-                                            style={{
-                                                color: '#e2e8f0',
-                                            }}
-                                        ></MenuBookOutlinedIcon>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Page 2" />
-                                </ListItem>
-                            </Link>
-                            <Link href="/docs/create-a-page" passHref>
-                                <ListItem button component="a">
-                                    <ListItemIcon>
-                                        <MenuBookOutlinedIcon
-                                            style={{
-                                                color: '#e2e8f0',
-                                            }}
-                                        ></MenuBookOutlinedIcon>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Page 3" />
-                                </ListItem>
-                            </Link>
+                            {allDocs.map((doc: Doc) => (
+                                <Link
+                                    key={doc._id}
+                                    href={`/docs/${doc._raw.flattenedPath}`}
+                                    passHref
+                                >
+                                    <ListItem button component="a">
+                                        <ListItemIcon>
+                                            <MenuBookOutlinedIcon
+                                                style={{
+                                                    color: '#e2e8f0',
+                                                }}
+                                            ></MenuBookOutlinedIcon>
+                                        </ListItemIcon>
+                                        <ListItemText primary={doc.title} />
+                                    </ListItem>
+                                </Link>
+                            ))}
                         </List>
                     </Collapse>
                 </List>

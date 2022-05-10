@@ -1,7 +1,8 @@
 const path = require('path');
 const { withContentlayer } = require('next-contentlayer');
 
-module.exports = withContentlayer({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
     reactStrictMode: false,
     images: {
         domains: [],
@@ -16,4 +17,6 @@ module.exports = withContentlayer({
         // !! WARN !!
         ignoreBuildErrors: true,
     },
-});
+};
+
+module.exports = withContentlayer(nextConfig);

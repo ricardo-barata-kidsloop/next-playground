@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from '@mui/material';
-import React from 'react';
 import { useRouter } from 'next/router';
+import React from 'react';
 
 const Header = () => {
     const router = useRouter();
@@ -29,7 +29,9 @@ const Header = () => {
                         LOGO
                     </Typography>
                     <Box>
-                        <Button variant="contained" onClick={handleClick}>Learn More</Button>
+                        <Button variant="contained" onClick={handleClick}>
+                            Learn More
+                        </Button>
                     </Box>
                 </Box>
             </Container>

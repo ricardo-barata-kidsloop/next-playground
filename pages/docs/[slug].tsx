@@ -1,7 +1,7 @@
+import { Counter } from 'components/counter';
 import Layout from 'components/Layout/Layout';
 import { allDocs, Doc } from 'contentlayer/generated';
-import { format, parseISO } from 'date-fns';
-import Head from 'next/head';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 import { ReactElement } from 'react';
 
 export async function getStaticPaths() {
@@ -28,19 +28,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function DocLayout({ doc }: { doc: Doc }) {
+    const MdxBody = useMDXComponent(doc.body.code);
     return (
         <>
-            <Head>
-                <title>{doc.title}</title>
-            </Head>
             <article>
-                <div>
-                    <time dateTime={doc.date}>
-                        {format(parseISO(doc.date), 'LLLL d, yyyy')}
-                    </time>
-                    <h1>{doc.title}</h1>
+                <div className="markdown-body" style={{ margin: `2rem` }}>
+                    <MdxBody components={{ Counter }} />
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: doc.body.html }} />
             </article>
         </>
     );

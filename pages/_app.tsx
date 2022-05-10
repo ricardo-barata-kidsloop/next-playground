@@ -4,6 +4,7 @@ import { Router } from 'next/router';
 import NProgress from 'nprogress';
 import type { ReactElement, ReactNode } from 'react';
 import '../node_modules/nprogress/nprogress.css';
+import '../styles/github-markdown.scss';
 import '../styles/globals.scss';
 type NextPageWithLayout = NextPage & {
     getLayout?: (page: ReactElement) => ReactNode;
