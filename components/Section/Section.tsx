@@ -1,4 +1,4 @@
-import  Box from '@mui/material/Box';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import React, { ReactNode } from 'react';
 

@@ -1,5 +1,5 @@
-import  Box from '@mui/material/Box';
-import  Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import HeroBase from 'components/HeroBase';
 import Section from 'components/Section/Section';
 import Head from 'next/head';

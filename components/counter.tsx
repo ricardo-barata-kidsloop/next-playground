@@ -8,5 +8,9 @@ export function Counter() {
         setCount(count + 1);
     }
 
-    return <Button variant="contained"onClick={handleClick}>Clicked {count} times!</Button>;
+    return (
+        <Button variant="contained" onClick={handleClick}>
+            Clicked {count} times!
+        </Button>
+    );
 }

@@ -6,10 +6,9 @@ import { ReactElement, useEffect, useState } from 'react';
 
 type Layout = 'sidebar' | 'stacked';
 export default function ApiElements() {
-
     const { width, height } = useWindowSize();
 
-    const [layout, setLayout] = useState<Layout>("sidebar");
+    const [layout, setLayout] = useState<Layout>('sidebar');
 
     useEffect(() => {
         if (width < 600) {
