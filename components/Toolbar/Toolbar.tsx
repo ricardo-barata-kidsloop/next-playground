@@ -1,9 +1,10 @@
-import { MenuIcon } from '@heroicons/react/solid';
-import { Button } from '@mui/material';
+import MenuIcon from '@heroicons/react/solid/MenuIcon';
+import Button from '@mui/material/Button';
 import { useMemo } from 'react';
 import { useLayoutContext } from '../../contexts/LayoutContext';
 import useWindowSize from '../../hooks/useWindowSize';
 import styles from '../../styles/Toolbar.module.scss';
+
 export default function Toolbar() {
     const { isOpen, setIsOpen } = useLayoutContext();
     const { width, height } = useWindowSize();

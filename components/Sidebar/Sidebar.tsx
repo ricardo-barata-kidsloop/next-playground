@@ -1,14 +1,13 @@
-import {
-    ApiOutlined,
-    ArrowCircleLeftOutlined,
-    ExpandLess,
-    ExpandMore,
-    GridView as GridViewIcon,
-    HomeOutlined,
-} from '@mui/icons-material';
+import ApiOutlined from '@mui/icons-material/ApiOutlined';
+import ArrowCircleLeftOutlined from '@mui/icons-material/ArrowCircleLeftOutlined';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import GridView from '@mui/icons-material/GridView';
+import HomeOutlined from '@mui/icons-material/HomeOutlined';
 import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
 import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import { Collapse, ListItem } from '@mui/material';
+import ListItem from '@mui/material/ListItem';
+import Collapse from '@mui/material/Collapse';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -95,11 +94,11 @@ export default function Sidebar() {
                             <Link href="/page1" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
-                                        <GridViewIcon
+                                        <GridView
                                             style={{
                                                 color: '#e2e8f0',
                                             }}
-                                        ></GridViewIcon>
+                                        ></GridView>
                                     </ListItemIcon>
                                     <ListItemText primary="Page 1" />
                                 </ListItem>
@@ -107,11 +106,11 @@ export default function Sidebar() {
                             <Link href="/page2" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
-                                        <GridViewIcon
+                                        <GridView
                                             style={{
                                                 color: '#e2e8f0',
                                             }}
-                                        ></GridViewIcon>
+                                        ></GridView>
                                     </ListItemIcon>
                                     <ListItemText primary="Page 2" />
                                 </ListItem>
@@ -119,11 +118,11 @@ export default function Sidebar() {
                             <Link href="/page3" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
-                                        <GridViewIcon
+                                        <GridView
                                             style={{
                                                 color: '#e2e8f0',
                                             }}
-                                        ></GridViewIcon>
+                                        ></GridView>
                                     </ListItemIcon>
                                     <ListItemText primary="Page 3" />
                                 </ListItem>
