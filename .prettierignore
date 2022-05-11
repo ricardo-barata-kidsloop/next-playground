@@ -3,3 +3,4 @@ build/
 dist/
 .gitignore
 .next/
+.contentlayer/

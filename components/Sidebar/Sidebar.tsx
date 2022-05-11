@@ -103,18 +103,6 @@ export default function Sidebar() {
                                     <ListItemText primary="Swagger" />
                                 </ListItem>
                             </Link>
-                            <Link href="/specs/elements" passHref>
-                                <ListItem button component="a">
-                                    <ListItemIcon>
-                                        <GridView
-                                            style={{
-                                                color: '#e2e8f0',
-                                            }}
-                                        ></GridView>
-                                    </ListItemIcon>
-                                    <ListItemText primary="Elements" />
-                                </ListItem>
-                            </Link>
                             <Link href="/specs/redoc" passHref>
                                 <ListItem button component="a">
                                     <ListItemIcon>
